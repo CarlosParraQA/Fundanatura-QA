@@ -11,7 +11,7 @@ export function homeSuites() {
             url.urlBase()
             homeActions.redireccionesBotonMasInformacion()
         });    
-        it.only('Silder Carrusel - Saber más', () => {
+        it('Silder Carrusel - Saber más', () => {
             url.urlBase()
             homeActions.sliderCarruselSaberMas()
         });

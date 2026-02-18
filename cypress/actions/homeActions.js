@@ -8,15 +8,12 @@ class homeActions {
             homeElements.titulosH4().eq(1).should('have.text', data.titulos.titulo2)
             homeElements.titulosH4().eq(2).should('have.text', data.titulos.titulo3)
             homeElements.titulosH4().eq(3).should('have.text', data.titulos.titulo4)
-            homeElements.spansEducacionMedica().should('have.text', data.textoEducacionMedica)
+            homeElements.spansEducacionMedica().should('have.text', data.textos.texto1)
         })
     }
     redireccionesBotonMasInformacion() {
-            homeElements.botones().eq(0).click()
-            cy.url().should('include', 'https://nhub.events/eventos/fundanatura/')
-            cy.go('back')
-            homeElements.botones().eq(1).click()
-            cy.url().should('include', 'https://nhub.events/eventos/fundanatura/')
+            homeElements.botones().eq(0).invoke('removeAttr', 'target').click()
+            cy.url().should('include', 'https://fundanatura.com/')
     }
     sliderCarruselMateriales() {
         homeElements.botonesCarrusel().click()
@@ -24,7 +21,7 @@ class homeActions {
     }
     sliderCarruselSaberMas() {
         homeElements.flecheSiguienteCarrusel().eq(0).click()
-        homeElements.botonesCarrusel().eq(1).click()
+        homeElements.botonesCarrusel().eq(0).invoke('removeAttr', 'target').click()
         cy.url().should('include', 'https://edu.academiademedicinafuncional.info/tienda/')
 
     }
