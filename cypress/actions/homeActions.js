@@ -23,7 +23,6 @@ class homeActions {
         homeElements.flecheSiguienteCarrusel().eq(0).click()
         homeElements.botonesCarrusel().eq(0).invoke('removeAttr', 'target').click()
         cy.url().should('include', 'https://edu.academiademedicinafuncional.info/tienda/')
-        cy.log('Redirección correcta al hacer clic en el botón "Saber más" del slider del carrusel')
     }
 
 }
