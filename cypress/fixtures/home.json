@@ -1,0 +1,18 @@
+{
+  "titulos": {
+    "titulo1": "EDUCACIÓN MÉDICA",
+    "titulo2": "EDUCACIÓN PARA TU SALUD",
+    "titulo3": "CLAVES PARA EL MEJORAMIENTO DE TU SALUD",
+    "titulo4": "NUESTROS VALORES"
+  },
+  "textos":{
+    "texto1": "«El camino de una formación que te permitirá recordar tu propósito y mantener un equilibrio positivo.»",
+    "texto2": "FUNDANATURA® es una asociación sin ánimo de lucro establecida en Colombia en el año 2011 que nace de la iniciativa de un grupo de personas con el objetivo de servir de canal  para la educación en el uso de los recursos naturales para mejorar la salud, mantenerla y no deteriorarla.",
+    "texto3": "Estamos seguros que una vida llena de felicidad y salud es posible. Sabemos que las condiciones del entorno diario nos llevan a situaciones que deterioraran la salud, principalmente a través de la alimentación. Si estuviésemos conscientes de esos factores que deterioran nuestra salud, seguramente nos mantendríamos alejados de ellos, y si conociésemos los factores que nos hacen bien, procuraríamos tenerlos, usarlos , consumirlos. Por eso creemos que la educación juega un papel indispensable para poder tener un cuerpo y una vida saludable. Esa es la misión de FUNDANATURA®, darle información correcta para que usted pueda recuperar y mantener su potencial físico."
+  },
+  "subtitulos": {
+    "sub1": "ES FUNDAMENTAL",
+    "sub2": "EN CUERPO SANO"
+  }
+}
+
