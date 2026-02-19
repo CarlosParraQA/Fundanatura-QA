@@ -10,6 +10,8 @@ class homeElements {
     flechaPreviaCarrusel = () => cy.get('div[class="elementor-swiper-button elementor-swiper-button-prev"]')
     flecheSiguienteCarrusel = () => cy.get('div[class="elementor-swiper-button elementor-swiper-button-next"]')
     botonesCarrusel = () => cy.get('div[aria-roledescription="slide"] a[class="swiper-slide-inner"]:visible')
+    textosFundanatura = () => cy.get('div[data-id="fdf4e63"] div p')
+
 }
 
 class footerElements {
@@ -19,11 +21,26 @@ class footerElements {
     textoContactos = () => cy.get('p[style="text-align: center;"]').eq(3)
     urlTC_Politica = () => cy.get('a[rel="noopener"]')
     nutrapp = () => cy.get('a[href="https://nutrapp.com.co/"]')
+
   }
+
+class documentosRTEElements {
+    titulo = () => cy.get('h3[class="elementor-heading-title elementor-size-default"]')
+    divMas = () => cy.get('div[class="elementor-accordion-item"]') // utilizar eq para seleccionar el acordeon deseado
+    documentos = () => cy.get('div[class="elementor-accordion-item"] ul li a') // utilizar eq para seleccionar el acordeon deseado
+}
+class blogElements {
+    tituloLanding = () => cy.get('h3[class="elementor-heading-title elementor-size-default"]')
+    botonesBlog = () => cy.get('a[class="elementor-button elementor-button-link elementor-size-sm elementor-animation-shrink"]')
+    titulosBlogs = () => cy.get('h5[class="elementor-heading-title elementor-size-default"]') // Utilizar eq(2) a eq(14)
+    textosBlogs = () => cy.get('div[data-id] p[style="text-align: center;"]') // Utilizar eq(0) a eq(12)
+}
 
 module.exports = {
     homeElements: new homeElements(),
     headerElements: new headerElements(),
-    footerElements: new footerElements()
+    footerElements: new footerElements(),
+    documentosRTEElements: new documentosRTEElements(),
+    blogElements: new blogElements()
 
 };
