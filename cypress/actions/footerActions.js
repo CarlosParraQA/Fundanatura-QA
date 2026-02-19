@@ -1,6 +1,4 @@
-const normalice = s =>
-    s.replace(/\s+/g, ' ').trim().normalize('NFKC');
-
+import { normalice } from '../support/commands'
 const { footerElements } = require('../elements/elements')
 
 class footerActions {

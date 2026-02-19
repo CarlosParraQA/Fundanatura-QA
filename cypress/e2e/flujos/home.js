@@ -19,6 +19,10 @@ export function homeSuites() {
             url.urlBase()
             homeActions.sliderCarruselMateriales()
         });
+        it('Textos asociación Fundanatura', () => {
+            url.urlBase()
+            homeActions.validacionTextosAsociacion()
+        });
         
     });
 
