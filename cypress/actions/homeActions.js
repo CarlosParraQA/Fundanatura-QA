@@ -20,7 +20,7 @@ class homeActions {
         cy.url().should('include', 'https://fundanatura.com/nuestro-blog/')
     }
     sliderCarruselSaberMas() {
-        homeElements.flecheSiguienteCarrusel().eq(0).click()
+        homeElements.flecheSiguienteCarrusel().eq(0).click().click()
         homeElements.botonesCarrusel().eq(0).invoke('removeAttr', 'target').click()
         cy.url().should('include', 'https://edu.academiademedicinafuncional.info/tienda/')
     }
