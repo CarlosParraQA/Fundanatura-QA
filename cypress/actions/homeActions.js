@@ -12,7 +12,7 @@ class homeActions {
         })
     }
     redireccionesBotonMasInformacion() {
-            homeElements.botones().eq(0).invoke('removeAttr', 'target').click()
+            homeElements.botones().eq(2).invoke('removeAttr', 'target').click()
             cy.url().should('include', 'https://fundanatura.com/')
     }
     sliderCarruselMateriales() {
@@ -22,7 +22,7 @@ class homeActions {
     sliderCarruselSaberMas() {
         homeElements.flecheSiguienteCarrusel().eq(0).click().click()
         homeElements.botonesCarrusel().eq(0).invoke('removeAttr', 'target').click()
-        cy.url().should('include', 'https://edu.academiademedicinafuncional.info/tienda/')
+        cy.url().should('include', 'https://nhub.events/tienda/?v=ab6c04006660')
     }
     validacionTextosAsociacion() {
         cy.fixture('home').then((data) => {

@@ -4,21 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cypress run",
     "cy:open": "cypress open",
     "pdf:report": "node cypress/scripts/generate-pdf.js",
-    "report:pdf": "cypress run & node cypress/scripts/generate-pdf.js"
+    "lighthouse": "lighthouse https://fundanatura.com --output html --output-path \"C:/Users/cparra/cypress/reportes/Lighthouse_Fundanatura.html\"",
+    "report:pdf": "cypress run & node cypress/scripts/generate-pdf.js",
+    "report:all": "npm run report:pdf && npm run lighthouse"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@cypress-audit/lighthouse": "^1.4.2",
+    "@cypress-audit/pa11y": "^1.4.2",
     "cypress": "^15.10.0",
     "cypress-mochawesome-reporter": "^4.0.2",
     "mochawesome": "^7.1.4",
     "mochawesome-merge": "^5.1.1",
     "mochawesome-report-generator": "^6.3.2",
     "puppeteer": "^24.37.5"
+  },
+  "dependencies": {
+    "cypress-audit": "^1.1.0",
+    "lighthouse": "^13.0.3"
   }
 }

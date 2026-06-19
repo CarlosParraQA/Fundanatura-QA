@@ -14,12 +14,22 @@ class footerActions {
         cy.url('https://fundanatura.com/documentos-rte/')
     }
     clickUrlTC() {
-        footerElements.urlTC_Politica().eq(0).invoke('removeAttr', 'target').click()
+        footerElements
+            .urlTC_Politica()
+            .filter('[href*="terminos-y-condiciones"]')
+            .first()
+            .invoke('removeAttr', 'target')
+            .click()
         cy.url('https://fundanatura.com/terminos-y-condiciones/')
     }
     clickUrlPolitica() {
         // Verifica que el PDF exista en el servidor y sea accesible (status 200 + application/pdf)
-        footerElements.urlTC_Politica().eq(1).should('have.attr', 'href').then((pdfUrl) => {
+        footerElements
+            .urlTC_Politica()
+            .filter('[href$=".pdf"]')
+            .first()
+            .should('have.attr', 'href')
+            .then((pdfUrl) => {
         cy.request({
             url: pdfUrl,
             method: 'GET',
