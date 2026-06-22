@@ -20,9 +20,10 @@ class homeActions {
         cy.url().should('include', 'https://fundanatura.com/nuestro-blog/')
     }
     sliderCarruselSaberMas() {
-        homeElements.flecheSiguienteCarrusel().eq(0).click().click()
-        homeElements.botonesCarrusel().eq(0).invoke('removeAttr', 'target').click()
-        cy.url().should('include', 'https://nhub.events/tienda/?v=ab6c04006660')
+    homeElements.flecheSiguienteCarrusel().eq(0).should('be.visible').dblclick()
+    cy.wait(2000)
+    homeElements.botonesCarrusel().eq(0).should('be.visible').invoke('removeAttr', 'target').click({ force: true });
+    cy.location('href', { timeout: 20000 }).should('include', 'https://nhub.events/cat-prod/curso/');
     }
     validacionTextosAsociacion() {
         cy.fixture('home').then((data) => {
